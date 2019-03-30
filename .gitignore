@@ -56,3 +56,7 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# [自訂]
+.env
+instruction.txt
