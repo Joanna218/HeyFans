@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{% block title %}發文系統{% endblock title %}</title>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+
+<body>
+{% block body %}
+<!-- 取代 nav 元件 -->
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="">發文系統</a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li><a href="{% url 'posts_list' %}">文章列表</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+{% endblock body %}
+</body>
+</html>
+{% comment %} Block-endblock tag 是 Django 用來標注某個區塊可以被 override 的語法。 {% endcomment %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  {{ block.super }}
+  <div class="container">
+    {% block content %}
+    {% endblock content %}
+  </div>
+{% endblock body %}
+
+{# block 區段為可以被overwrite的部分 #}
+{# block.super 表示沿用繼承的內容 #}
+{# 可自訂義被複寫的標籤 格是為 block xxx #}

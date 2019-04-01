@@ -14,10 +14,10 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 
 # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # 因為我們把設定檔拿進了一層（原本是 HeyFans/settings.py，現在是 HeyFans/settings/local.py），所以這個路徑要多往外跳一層才會正確。
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(
-    os.path.abspath(__file__)
-)))
-
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(
+#     os.path.abspath(__file__)
+# )))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Posts.apps.PostsConfig',
+    'base.apps.BaseConfig',
 ]
 
 MIDDLEWARE = [
