@@ -1,6 +1,5 @@
 from django.db import models
 
-# Create your models here.
 
 # 發文者
 
@@ -14,7 +13,7 @@ class Posts(models.Model):
     def __str__(self):
         return self.post_name
 
-    # 每一個發文者 總共的發文內容
+ # 每一個發文者 總共的發文內容
 
 
 class PostsItem(models.Model):
@@ -29,5 +28,6 @@ class PostsItem(models.Model):
     def __str__(self):
         return self.post_name
 
-    # 一個發文者 會有很多的發文內容
-    # 每一個發文內容 只屬於一個發文者
+# 一個發文者 會有很多的發文內容
+# 每一個發文內容 只屬於一個發文者
+# heyfans資料庫需要先建好
