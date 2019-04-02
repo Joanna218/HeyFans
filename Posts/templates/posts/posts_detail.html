@@ -1,0 +1,21 @@
+{# posts/templates/posts_detail.html #}
+
+{% extends 'posts/base.html' %}
+
+{% block title %}{{ posts.post_name }} | {{ block.super }}{% endblock title %}
+
+{% block content %}
+{% comment %} <a href="{% url 'home' pk=posts.pk %}" class="btn btn-default">更新店家資訊</a> {% endcomment %}
+<h1>{{ posts.post_name }}</h1>
+<p>{{ posts.post_name_id }}</p>
+<table class="table">
+  <thead>
+      <tr><th>發文者</th><th>發文內容</th></tr>
+    </thead>
+    <tbody>
+      {% for item in posts.menu_items.all %}
+      <tr><td>{{ item.post_name }}</td><td>{{ item.post_contents }}</td></tr>
+      {% endfor %}
+    </tbody>
+</table>
+{% endblock content %}

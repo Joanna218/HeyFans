@@ -1,5 +1,6 @@
-{# stores/templates/stores/store_list.html #}
+{# posts/templates/posts/store_list.html #}
 {% extends 'posts/base.html' %}
+
 {% block title %} 發文列表 | {{ block.super }} {% endblock title %}
 
 {% block content %}
@@ -8,9 +9,10 @@
   {% for post in posts %}
     <div class="post">
       <h2>
-        <a href="{{ post.get_absolute_url }}">{{ post.posts_name }}</a>
+        {% comment %} <h2><a href="{% url 'posts_detail' %}">{{ posts.name }}</a></h2> {% endcomment %}
+        <a href="{{ post.get_absolute_url }}">{{ post.post_name }}</a>
       </h2>
-      <p>{{ post.posts_contents }}</p>
+      <p>{{ post.post_name_id }}</p>
     </div>
   {% endfor %}
 

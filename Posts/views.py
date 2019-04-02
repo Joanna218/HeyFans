@@ -1,10 +1,6 @@
-# from django.forms.models import modelform_factory
-# from .forms import StoreForm
 from .models import Posts
 from django.shortcuts import render, redirect
-
 from django.http import HttpResponse
-# Create your views her
 
 
 def home(request):
@@ -22,4 +18,4 @@ def posts_detail(request, pk):
         posts = Posts.objects.get(pk=pk)
     except Store.DoesNotExist:
         raise Http404
-    return render(request, 'posts_detail.html', {'posts': posts})
+    return render(request, 'posts/posts_detail.html', {'posts': posts})

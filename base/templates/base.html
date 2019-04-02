@@ -1,25 +1,23 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
+<meta charset="utf-8">
 <title>{% block title %}發文系統{% endblock title %}</title>
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css" integrity="sha256-v5YlJGWVLS5hQ+o48fBzCKHEP2vMNsku57x3CosYykc=" crossorigin="anonymous" />
 </head>
-
 <body>
 {% block body %}
-<!-- 取代 nav 元件 -->
-<nav class="navbar navbar-default navbar-static-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="">發文系統</a>
-    </div>
-    <div>
-      <ul class="nav navbar-nav">
-        <li><a href="{% url 'posts_list' %}">文章列表</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+  <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+      <div class="container">
+          <div class="navbar-brand">
+              <a class="navbar-item" href="{% url 'home' %}">發文系統</a>
+          </div>
+              <div class="navbar-brand">
+        <a class="navbar-item" href="{% url 'posts_list' %}">發文列表</a>
+      </div>
+      </div>
+  </nav>
 {% endblock body %}
 </body>
 </html>

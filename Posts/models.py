@@ -30,4 +30,6 @@ class PostsItem(models.Model):
 
 # 一個發文者 會有很多的發文內容
 # 每一個發文內容 只屬於一個發文者
-# heyfans資料庫需要先建好
+# 1. heyfans資料庫需要先建好
+# 2. model先 makemigration、migrate
+# 3. createsuperuser

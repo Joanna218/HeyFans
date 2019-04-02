@@ -1,6 +1,8 @@
 {# posts/templates/posts/home.html #}
 
-<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% comment %} <!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -16,7 +18,7 @@
     </div>
 </nav>
 </body>
-</html>
+</html> {% endcomment %}
 
 
 {% comment %} 呼叫了 url 這個 tag，並傳入一個參數 'home'，tag 會幫你找到名稱為 home 的 URL pattern（名稱就是 urls.py 裡的 name='home' ），並輸出該 pattern 對應的網址。在這裡，輸出的就會是  {% endcomment %}
